@@ -5,7 +5,7 @@
 
 <h1 id="modul-300-dokumentation">Modul 300 Dokumentation</h1>
 <p>Modulbschreib: Platformübergreifende Services implementieren<br>
-Autor: Angel Zahnerw</p>
+Autor: Angel Zahner</p>
 <h2 id="toolumgebung-aufsetzen">10 - Toolumgebung Aufsetzen</h2>
 <ol>
 <li>GitHub registriert mit TBZ-Account</li>
