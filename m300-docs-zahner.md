@@ -6,23 +6,39 @@
 <h1 id="modul-300-dokumentation">Modul 300 Dokumentation</h1>
 <p>Modulbschreib: Platformübergreifende Services implementieren<br>
 Autor: Angel Zahner</p>
-<h2 id="toolumgebung-aufsetzen">10 - Toolumgebung Aufsetzen</h2>
-<ol>
+<h2 id="toolumgebung-aufsetzen">Toolumgebung Aufsetzen</h2>
+<ul>
 <li>GitHub registriert mit TBZ-Account</li>
 <li>Git-bash installiert; Verzeichnis mit Beispielen erstellt; <a href="https://github.com/mc-b/devops">Git Repo</a> geclont</li>
 <li>VirtualBox installiert und manuelle Linux-VM mit apache2 generiert</li>
-<li>Vagrant heruntergeladen und installiert und atuomatisch eine Linux-VM generiert</li>
-<li>Visual Studio Code installiert</li>
-</ol>
-<h2 id="prototyping">20 - Prototyping</h2>
-<ol>
-<li>Rest-Client: cURL getestet</li>
-<li>Git-Hub in Betrieb genommen, Markdown-Docs gepublished</li>
-<li>LAMP Aufgesetzt<br>
-<code>sudo apt-get install mysql-server</code><br>
-<code>sudo apt-get install apache2</code></li>
-<li>Rest-Serverseitig: CGI-Script</li>
-</ol>
+<li>Vagrant heruntergeladen und installiert</li>
+<li>Visual Studio Code installiert und Erweiterungen hinzugefügt</li>
+<li>Git-Hub in Betrieb genommen, Markdown-Docs von <a href="http://stackedit.io">stackedit.io</a> gepublished</li>
+</ul>
+<h2 id="vagrant">Vagrant</h2>
+<h3 id="installation">Installation</h3>
+<ul>
+<li>Vagrant von <a href="https://www.vagrantup.com/downloads.html">hier</a> heruntergeladen</li>
+<li>Auf Windows 10 Laptop installiert</li>
+</ul>
+<h3 id="vm-erstellen-und-benutzen">VM erstellen und benutzen</h3>
+<p>Neues Vagrantfile erstellen:</p>
+<pre><code>vagrant init ubuntu/xenial64 
+</code></pre>
+<p>Virtuelle Maschine aus Vagrantfile erstellen:</p>
+<pre><code>vagrant up
+</code></pre>
+<p>Auf VM verbinden:</p>
+<pre><code>vagrant ssh
+</code></pre>
+<h2 id="github">GitHub</h2>
+<p>Ich habe ein Repository namens “lamp” erstellt, in das ich nachher mit folgenden Befehlen mein Vagrantfile publishe:</p>
+<pre><code>git init #In Order, wo sich das File befindet
+git remote add origin https://github.com/zahnera/lamp.git
+git add .
+git commit -a -m "änderungen"
+git push origin master
+</code></pre>
 <h2 id="eigener-service-implementieren">Eigener Service implementieren</h2>
 <p>Ich habe mich für eine LAMP-Installation entschieden.</p>
 <p>LAMP steht für:</p>
