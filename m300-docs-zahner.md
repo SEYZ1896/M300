@@ -92,5 +92,29 @@ end
 <td>VM wird aus Vagrantfile erstellt</td>
 <td>Keine</td>
 </tr>
+<tr>
+<td>2</td>
+<td><code>service apache2 restart</code></td>
+<td>apache wird neugestartet</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>service mysql restart</code></td>
+<td>mysql wird neugestartet</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>localhost:8080/phpmyadmin</code></td>
+<td>phpmyadmin login fenster</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>localhost:8080/index.html</code></td>
+<td>webseite wird angezeigt</td>
+<td>Keine</td>
+</tr>
 </tbody>
 </table>
