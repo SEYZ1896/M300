@@ -33,15 +33,15 @@ Autor: Angel Zahner</p>
 </code></pre>
 <h2 id="github">GitHub</h2>
 <p>Ich habe ein Repository namens “lamp” erstellt, in das ich nachher mit folgenden Befehlen mein Vagrantfile publishe:</p>
-<pre><code>git init #In Order, wo sich das File befindet
+<pre><code>git init #in the dir your file to push is located
 git remote add origin https://github.com/zahnera/lamp.git
 git add .
 git commit -a -m "änderungen"
 git push origin master
 </code></pre>
 <h2 id="eigener-service-implementieren">Eigener Service implementieren</h2>
-<p>Ich habe mich für eine LAMP-Installation entschieden.</p>
-<p>LAMP steht für:</p>
+<p>Ich habe mich für eine LAMP-Installation entschieden.<br>
+LAMP steht für:</p>
 
 <table>
 <thead>
@@ -61,19 +61,9 @@ git push origin master
 </tr>
 </tbody>
 </table><p>Das heisst es wird automatisch eine Ubuntu 16.04 Maschine mit diesen LAMP-Services installiert.</p>
-<pre class=" language-bash"><code class="prism  language-bash">Vagrant.configure<span class="token punctuation">(</span>2<span class="token punctuation">)</span> <span class="token keyword">do</span> <span class="token operator">|</span>config<span class="token operator">|</span>
-	config.vm.box <span class="token operator">=</span>  <span class="token string">"ubuntu/xenial64"</span>
-	config.vm.network <span class="token string">"forwarded_port"</span>, guest:80, host:8080, auto_correct: <span class="token boolean">true</span>
-	config.vm.synced_folder <span class="token string">"."</span>, <span class="token string">"/var/www/html"</span>
-config.vm.provider <span class="token string">"virtualbox"</span>  <span class="token keyword">do</span> <span class="token operator">|</span>vb<span class="token operator">|</span>
-	vb.memory <span class="token operator">=</span>  <span class="token string">"1024"</span>
-end
-config.vm.provision <span class="token string">"shell"</span>, inline: <span class="token operator">&lt;&lt;</span>-SHELL
-	<span class="token function">sudo</span> <span class="token function">apt-get</span> update
-	<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mysql-server
-SHELL
-end
-</code></pre>
+<h3 id="code">Code</h3>
+<p>Auf GitHub unter <a href="https://github.com/zahnera/lamp.git">https://github.com/zahnera/lamp.git</a><br>
+<img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-vagrantfile.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-vagrantfile.png&amp;openfolder=normal&amp;ep=" alt="enter image description here"></p>
 <h2 id="testing">Testing</h2>
 
 <table>
