@@ -107,14 +107,31 @@ end
 <tr>
 <td>4</td>
 <td><code>localhost:8080/phpmyadmin</code></td>
-<td>phpmyadmin login fenster</td>
+<td>phpmyadmin login-fenster</td>
 <td>Keine</td>
 </tr>
 <tr>
 <td>5</td>
 <td><code>localhost:8080/index.html</code></td>
-<td>webseite wird angezeigt</td>
+<td>Webseite wird angezeigt</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>MySQL command "CREATE DATABASE tbz;</code></td>
+<td>Datenbank wird erstellt</td>
 <td>Keine</td>
 </tr>
 </tbody>
-</table>
+</table><h3 id="bilder">Bilder</h3>
+<h4 id="testcase-2">Testcase 2</h4>
+<p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-apache2restart.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-apache2restart.png&amp;openfolder=normal&amp;ep=" alt="Testcase 2"></p>
+<h4 id="testcase-3">Testcase 3</h4>
+<p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-mysqlrestart.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-mysqlrestart.png&amp;openfolder=normal&amp;ep=" alt="Testcase 3"></p>
+<h4 id="testcase-4">Testcase 4</h4>
+<p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-phpmyadmin.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-phpmyadmin.png&amp;openfolder=normal&amp;ep=" alt="Testcase 4"></p>
+<h4 id="testcase-5">Testcase 5</h4>
+<p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-webseite.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-webseite.png&amp;openfolder=normal&amp;ep=" alt="Testcase 5"></p>
+<h4 id="testcase-5-1">Testcase 5</h4>
+<p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-database.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-database.png&amp;openfolder=normal&amp;ep=" alt="enter image description here"></p>
+
