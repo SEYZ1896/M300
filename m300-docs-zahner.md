@@ -172,6 +172,28 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h3 id="container-aus-eigenem-dockerfile-erstellen">Container aus eigenem Dockerfile erstellen</h3>
+<pre><code>FROM ubuntu:latest
+
+#Install updates
+RUN apt-get update
+RUN apt-get -y install apt-utils
+RUN apt-get -y upgrade
+
+#Install Webserver
+RUN apt-get -y install apache2
+
+#Change config
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_LOCK_DIR /var/lock/apache2
+ENV APACHE_PID_FILE /var/run/apache2.pid
+
+EXPOSE 80
+
+#Start apache2
+CMD /usr/sbin/apache2ctl -D FOREGROUND
+</code></pre>
 <h4 id="testing-1">Testing</h4>
 
 <table>
@@ -214,7 +236,8 @@ LAMP steht für:</p>
 <td>Die Firewall wird eingeschaltet</td>
 </tr>
 </tbody>
-</table><h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
+</table><h3 id="monitoring">Monitoring</h3>
+<h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
 <table>
 <thead>
