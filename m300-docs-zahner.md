@@ -236,7 +236,10 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 <td>Die Firewall wird eingeschaltet</td>
 </tr>
 </tbody>
-</table><h3 id="monitoring">Monitoring</h3>
+</table><h3 id="monitoring---cadvisor">Monitoring - cAdvisor</h3>
+<p>Mit folgendem Befehl kann man das Monitoring-Tool für Docker installieren:</p>
+<pre><code>docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
+</code></pre>
 <h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
 <table>
