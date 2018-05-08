@@ -167,8 +167,64 @@ LAMP steht für:</p>
 <li>Auf Docker-Container zugreifen<pre><code> docker run -ti apache2 /bin/bash
 </code></pre>
 </li>
+<li>Docker Port ändern<pre><code> docker run -p 123:80 apache2
+</code></pre>
+</li>
 </ol>
-<h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
+<h3 id="container-aus-eigenem-dockerfile-erstellen">Container aus eigenem Dockerfile erstellen</h3>
+<h4 id="testing-1">Testing</h4>
+
+<table>
+<thead>
+<tr>
+<th>Testbeschreib</th>
+<th>Erwartetes Ergebnis</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker Build</td>
+<td>Image wird erstellt</td>
+<td>Image wird erstellt</td>
+</tr>
+<tr>
+<td>Docker Run</td>
+<td>Verbindet auf Container</td>
+<td>Verbindet auf Container</td>
+</tr>
+<tr>
+<td>Port Forwarding</td>
+<td>localhost:xxx zeigt apache default-page an</td>
+<td>zeigt apache default-page an</td>
+</tr>
+<tr>
+<td>Apache Neustarten</td>
+<td>Apache2 wird neugestartet</td>
+<td>Apache2 wird neugestartet</td>
+</tr>
+<tr>
+<td>UFW Firewall</td>
+<td>Die Firewall wird installiert</td>
+<td>Die Firewall wirk korrekt installiert</td>
+</tr>
+<tr>
+<td>UFW Konfiguration</td>
+<td>Die Firewall wird automatisch konfiguriert</td>
+<td>Die Firewall wird nicht automatisch konfiguriert, das Script muss noch manuell ausgeführt werden.</td>
+</tr>
+<tr>
+<td>Lokale Datei Copy</td>
+<td>Das Lokal gespeicherte Script wird in den Container kopiert</td>
+<td>Das Vorgesehene Script wird automatisch im Docker zur Verfügung gestellt und kann problemlos ausgeführt werden.</td>
+</tr>
+<tr>
+<td>Neuer Benutzer</td>
+<td>Es wird ein neuer Benutzer angelegt</td>
+<td>docker_user existiert im /etc/passwd das bedeutet, dass er existiert.</td>
+</tr>
+</tbody>
+</table><h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
 <table>
 <thead>
