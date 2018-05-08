@@ -189,16 +189,16 @@ LAMP steht für:</p>
 <td>updates a container’s resource limits.</td>
 </tr>
 <tr>
-<td><code>docker update</code></td>
-<td>updates a container’s resource limits.</td>
+<td><code>docker ps</code></td>
+<td>shows running containers.</td>
 </tr>
 <tr>
-<td><code>docker update</code></td>
-<td>updates a container’s resource limits.</td>
+<td><code>docker images</code></td>
+<td>shows all images.</td>
 </tr>
 <tr>
-<td><code>docker update</code></td>
-<td>updates a container’s resource limits.</td>
+<td><code>docker build</code></td>
+<td>creates image from Dockerfile.</td>
 </tr>
 </tbody>
 </table>
