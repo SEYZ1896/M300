@@ -199,29 +199,19 @@ LAMP steht für:</p>
 <td>zeigt apache default-page an</td>
 </tr>
 <tr>
-<td>Apache Neustarten</td>
+<td>Apache neustarten</td>
 <td>Apache2 wird neugestartet</td>
 <td>Apache2 wird neugestartet</td>
 </tr>
 <tr>
-<td>UFW Firewall</td>
-<td>Die Firewall wird installiert</td>
-<td>Die Firewall wirk korrekt installiert</td>
+<td>UFW neustarten</td>
+<td>Firewall startet neu</td>
+<td>Firewall startet neu</td>
 </tr>
 <tr>
-<td>UFW Konfiguration</td>
-<td>Die Firewall wird automatisch konfiguriert</td>
-<td>Die Firewall wird nicht automatisch konfiguriert, das Script muss noch manuell ausgeführt werden.</td>
-</tr>
-<tr>
-<td>Lokale Datei Copy</td>
-<td>Das Lokal gespeicherte Script wird in den Container kopiert</td>
-<td>Das Vorgesehene Script wird automatisch im Docker zur Verfügung gestellt und kann problemlos ausgeführt werden.</td>
-</tr>
-<tr>
-<td>Neuer Benutzer</td>
-<td>Es wird ein neuer Benutzer angelegt</td>
-<td>docker_user existiert im /etc/passwd das bedeutet, dass er existiert.</td>
+<td>UFW enable</td>
+<td>Die Firewall wird eingeschaltet</td>
+<td>Die Firewall wird eingeschaltet</td>
 </tr>
 </tbody>
 </table><h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
