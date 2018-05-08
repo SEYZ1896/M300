@@ -126,6 +126,7 @@ LAMP steht für:</p>
 <p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-database.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-database.png&amp;openfolder=normal&amp;ep=" alt="enter image description here"></p>
 <h1 id="modul-300-dokumentation---lb2">Modul 300 Dokumentation - LB2</h1>
 <h2 id="docker-installieren">Docker installieren</h2>
+<p>Um Docker aufzusetzen, habe ich eine virtuelle Maschine mit <strong>Ubuntu 16.04</strong> in <strong>VirtualBox</strong> erstellt.</p>
 <h3 id="repository-aufsetzen">Repository aufsetzen</h3>
 <ol>
 <li>Update the  <code>apt</code>  package index:<pre><code> sudo apt-get update
@@ -157,4 +158,47 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h2 id="docker-container-erstellen">Docker Container erstellen</h2>
+<h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker create</code></td>
+<td>creates a container but does not start it.</td>
+</tr>
+<tr>
+<td><code>docker rename</code></td>
+<td>allows the container to be renamed.</td>
+</tr>
+<tr>
+<td><code>docker run</code></td>
+<td>creates and starts a container in one operation.</td>
+</tr>
+<tr>
+<td><code>docker rm</code></td>
+<td>deletes a container.</td>
+</tr>
+<tr>
+<td><code>docker update</code></td>
+<td>updates a container’s resource limits.</td>
+</tr>
+<tr>
+<td><code>docker update</code></td>
+<td>updates a container’s resource limits.</td>
+</tr>
+<tr>
+<td><code>docker update</code></td>
+<td>updates a container’s resource limits.</td>
+</tr>
+<tr>
+<td><code>docker update</code></td>
+<td>updates a container’s resource limits.</td>
+</tr>
+</tbody>
+</table>
