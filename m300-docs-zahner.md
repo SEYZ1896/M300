@@ -158,6 +158,16 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h2 id="docker-container-erstellen">Docker Container erstellen</h2>
+<h3 id="devops-container-erstellen">Devops Container erstellen</h3>
+<ol>
+<li><code>cd</code> zu Dockerfile Directory bsp. /desktop/devops/docker/apache2</li>
+<li>Von Dockerfile Image erstellen<pre><code> docker build -t apache2 .
+</code></pre>
+</li>
+<li>Auf Docker-Container zugreifen<pre><code> docker run -ti apache2 /bin/bash
+</code></pre>
+</li>
+</ol>
 <h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
 <table>
