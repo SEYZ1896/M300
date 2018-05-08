@@ -172,7 +172,8 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h3 id="container-aus-eigenem-dockerfile-erstellen">Container aus eigenem Dockerfile erstellen</h3>
-<pre><code>FROM ubuntu:latest
+<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von ubuntu und installiert apache2</p>
+<pre><code>FROM ubuntu:16.04
 
 #Install updates
 RUN apt-get update
@@ -181,6 +182,9 @@ RUN apt-get -y upgrade
 
 #Install Webserver
 RUN apt-get -y install apache2
+
+#Install Firewall
+RUN apt-get -y install ufw
 
 #Change config
 ENV APACHE_RUN_USER www-data
@@ -193,6 +197,9 @@ EXPOSE 80
 
 #Start apache2
 CMD /usr/sbin/apache2ctl -D FOREGROUND
+</code></pre>
+<p>Firewall manuell aktivieren</p>
+<pre><code>sudo ufw enable
 </code></pre>
 <h4 id="testing-1">Testing</h4>
 
