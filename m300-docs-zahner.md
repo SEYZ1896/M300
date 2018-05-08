@@ -125,4 +125,36 @@ LAMP steht für:</p>
 <h4 id="testcase-6">Testcase 6</h4>
 <p><img src="https://perrone.myqnapcloud.com:450/share.cgi/angel-database.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=angel-database.png&amp;openfolder=normal&amp;ep=" alt="enter image description here"></p>
 <h1 id="modul-300-dokumentation---lb2">Modul 300 Dokumentation - LB2</h1>
+<h2 id="docker-installieren">Docker installieren</h2>
+<h3 id="repository-aufsetzen">Repository aufsetzen</h3>
+<ol>
+<li>Update the  <code>apt</code>  package index:<pre><code> sudo apt-get update
+</code></pre>
+</li>
+<li>Install packages to allow  <code>apt</code>  to use a repository over HTTPS:<pre><code> sudo apt-get install
+ apt-transport-https
+ ca-certificates
+ curl
+ software-properties-common
+</code></pre>
+</li>
+<li>Add Docker’s official GPG key:<pre><code> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</code></pre>
+</li>
+<li>Setting up the stable repository.<pre><code> sudo add-apt-repository \
+ "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+ $(lsb_release -cs)  stable"
+</code></pre>
+</li>
+</ol>
+<h4 id="install-docker-ce">Install Docker CE</h4>
+<ol>
+<li>Update the  <code>apt</code>  package index.<pre><code> sudo apt-get update
+</code></pre>
+</li>
+<li>Install the  <em>latest version</em>  of Docker CE<pre><code> sudo apt-get install docker-ce
+</code></pre>
+</li>
+</ol>
+<h2 id="docker-container-erstellen">Docker Container erstellen</h2>
 
