@@ -172,7 +172,8 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h3 id="container-aus-eigenem-dockerfile-erstellen">Container aus eigenem Dockerfile erstellen</h3>
-<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von ubuntu und installiert apache2</p>
+<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von ubuntu und installiert apache2<br>
+<strong>ZU WENIG SPACE AUF VM!!!</strong></p>
 <pre><code>FROM ubuntu:16.04
 
 #Install updates
