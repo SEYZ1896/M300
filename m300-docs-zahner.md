@@ -172,8 +172,7 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h3 id="container-aus-eigenem-dockerfile-erstellen">Container aus eigenem Dockerfile erstellen</h3>
-<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von ubuntu und installiert apache2<br>
-<strong>ZU WENIG SPACE AUF VM!!!</strong></p>
+<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von ubuntu und installiert apache2</p>
 <pre><code>FROM ubuntu:16.04
 
 #Install updates
@@ -248,6 +247,11 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 <p>Mit folgendem Befehl kann man das Monitoring-Tool für Docker installieren:</p>
 <pre><code>docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
 </code></pre>
+<h3 id="speicherproblem">Speicherproblem</h3>
+<ol>
+<li>C:\Program Files\Oracle\VirtualBox&gt;VBoxManage modifyhd “C:\Users\Angel\VirtualBox VMs\m300\m300.vdi” --resize 20480</li>
+<li>gparted herunterladen und in VirtualBox einfügen</li>
+</ol>
 <h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
 <table>
