@@ -267,6 +267,14 @@ RUN rc-update add iptables
 <li>gparted herunterladen und in VirtualBox als Live CD einfügen</li>
 <li><a href="https://askubuntu.com/questions/175174/why-cant-i-increase-the-size-of-sda1-using-gparted">https://askubuntu.com/questions/175174/why-cant-i-increase-the-size-of-sda1-using-gparted</a></li>
 </ol>
+<h3 id="github-1">GitHub</h3>
+<p>Ich habe ein Repository namens “nginx” erstellt, in das ich nachher mit folgenden Befehlen mein Dockerfile publishe:</p>
+<pre><code>git init #in the dir your file to push is located
+git remote add origin https://github.com/zahnera/nginx.git
+git add .
+git commit -a -m "final commit"
+git push origin master
+</code></pre>
 <h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
 <table>
