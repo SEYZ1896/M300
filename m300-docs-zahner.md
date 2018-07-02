@@ -201,6 +201,17 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 <p>Firewall manuell aktivieren</p>
 <pre><code>sudo ufw enable
 </code></pre>
+<h3 id="try2">Try2</h3>
+<pre><code> FROM php:7.0-apache
+COPY src/ /var/www/html/
+EXPOSE 80
+</code></pre>
+<h4 id="php">PHP</h4>
+<p>Für den PHP Container brauchen wir auch ein PHP File, welches wir im src Ordner ablegen.<br>
+Das PHP sieht so aus:</p>
+<pre><code>&lt;?php
+echo "Angels Apache";
+</code></pre>
 <h4 id="testing-1">Testing</h4>
 
 <table>
