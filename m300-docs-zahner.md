@@ -240,8 +240,8 @@ RUN rc-update add iptables
 </tr>
 <tr>
 <td>Nginx neustarten</td>
-<td>Apache2 wird neugestartet</td>
-<td>Apache2 wird neugestartet</td>
+<td>Nginx wird neugestartet</td>
+<td>Nginx wird neugestartet</td>
 </tr>
 <tr>
 <td>Firewall neustarten</td>
