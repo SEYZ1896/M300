@@ -187,8 +187,8 @@ LAMP steht für:</p>
 COPY . /usr/share/nginx/html
 
 #Install Firewall
-RUN sudo apk add awall
-RUN sudo rc-update add iptables
+RUN apk add awall
+RUN rc-update add iptables
 </code></pre>
 <p>Firewall manuell aktivieren</p>
 <pre><code>sudo rc-service iptables start
