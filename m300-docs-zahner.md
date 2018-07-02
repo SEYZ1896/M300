@@ -172,45 +172,40 @@ LAMP steht für:</p>
 </li>
 </ol>
 <h3 id="container-aus-eigenem-dockerfile-erstellen">Container aus eigenem Dockerfile erstellen</h3>
-<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von ubuntu und installiert apache2</p>
-<pre><code>FROM ubuntu:16.04
-
-#Install updates
-RUN apt-get update
-RUN apt-get -y install apt-utils
-RUN apt-get -y upgrade
-
-#Install Webserver
-RUN apt-get -y install apache2
+<p>Das Dockerfile nimmt als Betriebssystem die neuste Version von Alpine Linux mit dem Webserver Nginx installiert. Ich habe Alpine Linux gewählt, da es für Sicherheit, Einfachheit und Ressourceneffizienz sorgt. Mit der zweiten Linie kopiere ich das erstellte index.html in das Webserver-Verzeichnis des Nginx Servers.</p>
+<p>Im Docker Ordner folgendes Verzeichnis erstellen</p>
+<pre><code>mkdir nginx
+</code></pre>
+<p>Das benötigte Index.html erstellen und mit Sample-Text beschreiben</p>
+<pre><code>nano index.html
+</code></pre>
+<p>Das Dockerfile erstellen und untenstehender Code einfügen</p>
+<pre><code>nano Dockerfile
+</code></pre>
+<p>Code für Dockerfile:</p>
+<pre><code>FROM nginx:alpine
+COPY . /usr/share/nginx/html
 
 #Install Firewall
-RUN apt-get -y install ufw
-
-#Change config
-ENV APACHE_RUN_USER www-data
-ENV APACHE_RUN_GROUP www-data
-ENV APACHE_LOG_DIR /var/log/apache2
-ENV APACHE_LOCK_DIR /var/lock/apache2
-ENV APACHE_PID_FILE /var/run/apache2.pid
-
-EXPOSE 80
-
-#Start apache2
-CMD /usr/sbin/apache2ctl -D FOREGROUND
+RUN sudo apk add awall
+RUN sudo rc-update add iptables
 </code></pre>
 <p>Firewall manuell aktivieren</p>
-<pre><code>sudo ufw enable
+<pre><code>sudo rc-service iptables start
 </code></pre>
-<h3 id="try2">Try2</h3>
-<pre><code> FROM php:7.0-apache
-COPY src/ /var/www/html/
-EXPOSE 80
+<h4 id="image-erstellen">Image erstellen</h4>
+<p>Das Dockerfile ist jetzt fertig und nun müssen wir das Image bauen:</p>
+<pre><code>docker build -t nginx:v1 .
 </code></pre>
-<h4 id="php">PHP</h4>
-<p>Für den PHP Container brauchen wir auch ein PHP File, welches wir im src Ordner ablegen.<br>
-Das PHP sieht so aus:</p>
-<pre><code>&lt;?php
-echo "Angels Apache";
+<h4 id="container-starten">Container starten</h4>
+<pre><code>docker run -d -p 800:80 nginx:v1
+</code></pre>
+<p>Dieser Server läuft jetzt auf Port 800</p>
+<h4 id="server-aufrufen">Server aufrufen</h4>
+<p>Aufrufen der Seite <a href="http://localhost:800">http://localhost:800</a></p>
+<p><img src="https://perrone.myqnapcloud.com:450/share.cgi/m300-nginx-angel.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=m300-nginx-angel.png&amp;openfolder=normal&amp;ep=" alt="enter image description here"></p>
+<h4 id="auf-server-verbinden">Auf Server verbinden</h4>
+<pre><code>sudo docker exec -i -t Container-ID /bin/ash
 </code></pre>
 <h4 id="testing-1">Testing</h4>
 
@@ -224,32 +219,37 @@ echo "Angels Apache";
 </thead>
 <tbody>
 <tr>
-<td>Docker Build</td>
+<td>Docker build</td>
 <td>Image wird erstellt</td>
 <td>Image wird erstellt</td>
 </tr>
 <tr>
-<td>Docker Run</td>
+<td>Docker run</td>
+<td>Startet Container</td>
+<td>Container läuft</td>
+</tr>
+<tr>
+<td>Docker exec</td>
 <td>Verbindet auf Container</td>
 <td>Verbindet auf Container</td>
 </tr>
 <tr>
 <td>Port Forwarding</td>
-<td>localhost:xxx zeigt apache default-page an</td>
+<td>localhost:xxx zeigt Nginx default-page an</td>
 <td>zeigt apache default-page an</td>
 </tr>
 <tr>
-<td>Apache neustarten</td>
+<td>Nginx neustarten</td>
 <td>Apache2 wird neugestartet</td>
 <td>Apache2 wird neugestartet</td>
 </tr>
 <tr>
-<td>UFW neustarten</td>
+<td>Firewall neustarten</td>
 <td>Firewall startet neu</td>
 <td>Firewall startet neu</td>
 </tr>
 <tr>
-<td>UFW enable</td>
+<td>Firewall aktivieren</td>
 <td>Die Firewall wird eingeschaltet</td>
 <td>Die Firewall wird eingeschaltet</td>
 </tr>
@@ -258,6 +258,8 @@ echo "Angels Apache";
 <p>Mit folgendem Befehl kann man das Monitoring-Tool für Docker installieren:</p>
 <pre><code>docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
 </code></pre>
+<p>Das Monitoring-Tool kann über localhost:8080 aufgerufen werden<br>
+<img src="https://perrone.myqnapcloud.com:450/share.cgi/m300-monitoring-angel.png?ssid=02YbC2K&amp;fid=02YbC2K&amp;path=/&amp;filename=m300-monitoring-angel.png&amp;openfolder=normal&amp;ep=" alt="enter image description here"></p>
 <h3 id="speicherproblem">Speicherproblem</h3>
 <ol>
 <li>cd C:\Program Files\Oracle\VirtualBox</li>
@@ -306,6 +308,10 @@ echo "Angels Apache";
 <tr>
 <td><code>docker build</code></td>
 <td>creates image from Dockerfile.</td>
+</tr>
+<tr>
+<td><code>docker exec</code></td>
+<td>connect to bash.</td>
 </tr>
 </tbody>
 </table>
