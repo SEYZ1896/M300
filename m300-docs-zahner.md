@@ -249,7 +249,8 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 </code></pre>
 <h3 id="speicherproblem">Speicherproblem</h3>
 <ol>
-<li>C:\Program Files\Oracle\VirtualBox&gt;VBoxManage modifyhd “C:\Users\Angel\VirtualBox VMs\m300\m300.vdi” --resize 20480</li>
+<li>cd C:\Program Files\Oracle\VirtualBox</li>
+<li>VBoxManage modifyhd “C:\Users\Angel\VirtualBox VMs\m300\m300.vdi” --resize 20480</li>
 <li>gparted herunterladen und in VirtualBox einfügen</li>
 </ol>
 <h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
