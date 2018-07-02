@@ -251,7 +251,8 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 <ol>
 <li>cd C:\Program Files\Oracle\VirtualBox</li>
 <li>VBoxManage modifyhd “C:\Users\Angel\VirtualBox VMs\m300\m300.vdi” --resize 20480</li>
-<li>gparted herunterladen und in VirtualBox einfügen</li>
+<li>gparted herunterladen und in VirtualBox als Live CD einfügen</li>
+<li><a href="https://askubuntu.com/questions/175174/why-cant-i-increase-the-size-of-sda1-using-gparted">https://askubuntu.com/questions/175174/why-cant-i-increase-the-size-of-sda1-using-gparted</a></li>
 </ol>
 <h2 id="hilfreiche-commands">Hilfreiche Commands</h2>
 
